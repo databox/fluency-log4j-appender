@@ -19,7 +19,7 @@ limitations under the License.
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>io.github.technologize</groupId>
+	<groupId>com.databox</groupId>
 	<artifactId>fluentd-log4j-appender</artifactId>
 	<version>1.0.0</version>
 	<name>FluentD Log4j Appender</name>
@@ -79,8 +79,8 @@ limitations under the License.
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
+					<source>8</source>
+					<target>8</target>
 					<showDeprecation>true</showDeprecation>
 					<showWarnings>true</showWarnings>
 					<fork>true</fork>

@@ -10,11 +10,11 @@ updates:
   schedule:
     interval: daily
     time: '08:00'
-    timezone: 'Asia/Kolkata'
+    timezone: 'Europe/Ljubljana'
   open-pull-requests-limit: 10
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
     interval: "daily"
     time: '08:00'
-    timezone: 'Asia/Kolkata'
+    timezone: 'Europe/Ljubljana'

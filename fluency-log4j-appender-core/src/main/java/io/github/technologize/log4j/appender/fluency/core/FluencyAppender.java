@@ -47,6 +47,8 @@ public class FluencyAppender extends AbstractAppender {
 	
 	private static final NameAbbreviator abbreviator = NameAbbreviator.getAbbreviator("1.");
 
+	private static final String CTX = "ctx.";
+
 	private final Fluency fluency;
 	private final String tag;
 	private final Map<String, PatternLayout> fieldsParams;
@@ -129,7 +131,11 @@ public class FluencyAppender extends AbstractAppender {
         for (Entry<String, PatternLayout> fieldParam : this.fieldsParams.entrySet()) {
 			logEventData.put(fieldParam.getKey(), fieldParam.getValue().toSerializable(logEvent));
 		}
-        
+
+		for(Entry<String, String > ctxEntry: logEvent.getContextData().toMap().entrySet()) {
+			logEventData.put(CTX + ctxEntry.getKey(), ctxEntry.getValue());
+		}
+
 		/*
 		 * Refer: https://www.elastic.co/guide/en/elasticsearch/reference/current/date.html
 		 * Format that supports nanos is strict_date_optional_time_nanos which is same as DateTimeFormatter.ISO_INSTANT
