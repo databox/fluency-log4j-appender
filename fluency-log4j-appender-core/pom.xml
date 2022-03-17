@@ -26,12 +26,6 @@ limitations under the License.
 	<description>Log4j Appender Based on Fluency</description>
 	<url>https://github.com/technologize/fluency-log4j-appender</url>
 
-	<developers>
-		<developer>
-			<name>Bharat Gadde</name>
-			<url>https://github.com/bharat-gadde</url>
-		</developer>
-	</developers>
 
 	<licenses>
 		<license>
@@ -40,7 +34,6 @@ limitations under the License.
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-
 
 	<distributionManagement>
 		<repository>
@@ -75,35 +68,6 @@ limitations under the License.
 					<showDeprecation>true</showDeprecation>
 					<showWarnings>true</showWarnings>
 					<fork>true</fork>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>3.2.1</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar-no-fork</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.3.0</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<source>8</source>
 				</configuration>
 			</plugin>
 		</plugins>
